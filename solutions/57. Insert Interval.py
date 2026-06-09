@@ -5,7 +5,8 @@ class Solution:
         n = len(intervals)
 
         if n == 0:
-            return newInterval
+            result.append(newInterval)
+            return result
         
         # 1. 處理新區間左側完全不重疊的區間
         # 條件：當前區間的結束時間 < 新區間的開始時間

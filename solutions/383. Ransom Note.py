@@ -14,3 +14,23 @@ class Solution:
             else:
                 hashtable[i] -= 1        
         return True
+    
+
+# Counter
+
+from collections import Counter
+class Solution:
+    def canConstruct(self, ransomNote: str, magazine: str) -> bool:
+        if len(magazine) < len(ransomNote):
+            return False
+        
+        counter = Counter(magazine)
+
+        for c in ransomNote:
+            if c not in counter or counter[c] <= 0:
+                return False
+            else:
+                counter[c] -= 1           
+        
+        return True
+        
