@@ -2,7 +2,6 @@ class Solution:
     def exist(self, board: List[List[str]], word: str) -> bool:
         rows, cols = len(board), len(board[0])
         directions = [(0, 1), (0, -1), (1, 0), (-1, 0)]
-        res = False
 
         def dfs(w_index, r, c):
             # 1. 成功條件：如果索引達到單字長度，代表全數匹配成功
@@ -35,6 +34,6 @@ class Solution:
                 if dfs(0, r, c): 
                     return True                   
 
-        return res
+        return False
                         
         

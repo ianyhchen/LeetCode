@@ -35,3 +35,14 @@ class Solution:
             i += 1
 
         return res * sign
+    
+# Let Python handle overflow
+# while index < n and s[index].isdigit():            
+#             res = res * 10 + int(s[index])
+#             index += 1
+
+#         res *= sign
+#         if res > INT_MAX:
+#             res = INT_MAX
+#         elif res < INT_MIN:
+#             res = INT_MIN
